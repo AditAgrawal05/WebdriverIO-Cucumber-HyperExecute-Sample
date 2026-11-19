@@ -40,13 +40,6 @@ partialReports:
     location: Reports/
     frameworkName: extent
   
-testDiscovery:
-  type: automatic
-  mode: remote
-  args:
-    featureFilePaths: Features/
-    frameWork: java
-    specificTags: ["@ToDoOne", "@ToDoTwo", "@ToDoThree"]
 
 testRunnerCommand: npx wdio wdio.conf.js --spec=$test
 
