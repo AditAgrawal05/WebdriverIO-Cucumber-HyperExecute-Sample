@@ -37,10 +37,18 @@ uploadArtefacts:
 report: true
 partialReports:
     type: json
-    location: Reports/
+    location: Reports/cucumber-reports
     frameworkName: extent
   
+testDiscovery:
+  type: automatic
+  mode: remote
+  args:
+    featureFilePaths: Features/
+    frameWork: java
+    specificTags: ["@ToDoOne", "@ToDoTwo", "@ToDoThree"]
 
+    
 testRunnerCommand: npx wdio wdio.conf.js --spec=$test
 
 jobLabel: [selenium-webdriverIO, hybrid]
